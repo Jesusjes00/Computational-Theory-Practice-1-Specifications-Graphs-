@@ -234,4 +234,35 @@ def detect_cycles():
 
 
 if __name__ == "__main__":
-    print("")
+    op = int(input("1. for input_file\n2. for cities.\n3. for web sites.\n4. for actors.\n"))
+    match op:
+        case 1:
+            text = "example.txt"
+        case 2:
+            text = "cities.txt"
+        case 3:
+            text = "web.txt"
+        case 4:
+            text = "actors.txt"
+    with open(text, "r") as file:
+        for line in file:
+            data = line.strip().split(",")
+
+            if len(data) > 2 and data[-1].lower() != "bi":
+                for node in data:
+                    assignnode(node)
+
+            elif len(data) >= 2:
+                add_edge(data[0], data[1])
+
+                if len(data) == 3 and data[2].lower() == "bi":
+                    add_edge(data[1], data[0])
+
+    start = input("Initial node: ")
+    start = start.replace(" ", "_")
+    end = input("Final node: ")
+    end = end.replace(" ", "_")
+
+    setpoints(start, end)
+
+    find_all_routes()
