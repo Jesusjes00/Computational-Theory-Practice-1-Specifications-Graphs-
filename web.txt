@@ -1,0 +1,17 @@
+15
+Facebook,Instagram,WhatsApp,Threads,Twitter,TikTok,YouTube,Google,Gmail,LinkedIn,Pinterest,Reddit,Twitch,Discord,Spotify
+Facebook,Instagram,bi
+Facebook,WhatsApp
+Instagram,Threads,bi
+TikTok,Instagram
+Twitter,TikTok
+LinkedIn,Twitter
+Google,YouTube,bi
+Google,Gmail,bi
+YouTube,Twitch
+Twitch,Discord,bi
+Reddit,Discord,bi
+Pinterest,Instagram,bi
+Spotify,Instagram
+Facebook,Spotify
+Twitch,Twitter
